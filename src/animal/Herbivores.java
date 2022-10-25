@@ -23,6 +23,21 @@ public final class Herbivores extends Mammals{
     }
 
     @Override
+    public void eat() {
+        System.out.println("Травоядные едят траву");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Травоядные спят");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Травоядные перемещаются");
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -41,18 +56,5 @@ public final class Herbivores extends Mammals{
         return "Травоядные. " + super.toString()+" " +
                 "тип пищи: " + foodType;
     }
-    @Override
-    public void eat() {
-        System.out.println("Травоядные едят траву");
-    }
 
-    @Override
-    public void sleep() {
-        System.out.println("Травоядные спят");
-    }
-
-    @Override
-    public void move() {
-        System.out.println("Травоядные перемещаются");
-    }
 }

@@ -27,19 +27,6 @@ public abstract class Bird extends Animal{
     public abstract void hunt();
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Bird biurd = (Bird) o;
-        return Objects.equals(environment, biurd.environment);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(environment);
-    }
-
-    @Override
     public void eat() {
 
     }
@@ -52,6 +39,19 @@ public abstract class Bird extends Animal{
     @Override
     public void move() {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bird biurd = (Bird) o;
+        return Objects.equals(environment, biurd.environment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(environment);
     }
 
     @Override

@@ -39,21 +39,6 @@ public abstract class Mammals extends Animal{
         System.out.printf("%s walks with a speed %s in the %s", super.getName(), speed, environment);
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Mammals mammals = (Mammals) o;
-        return speed == mammals.speed && Objects.equals(environment, mammals.environment);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(environment, speed);
-    }
-
-
     @Override
     public void eat() {
 
@@ -67,6 +52,19 @@ public abstract class Mammals extends Animal{
     @Override
     public void move() {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mammals mammals = (Mammals) o;
+        return speed == mammals.speed && Objects.equals(environment, mammals.environment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(environment, speed);
     }
 
     @Override

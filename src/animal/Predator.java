@@ -14,13 +14,25 @@ public final class Predator extends Mammals {
             this.foodType = foodType;
         }
     }
-
+    public String getFoodType() {
+        return foodType;
+    }
     public void hunt(){
         System.out.printf("%s hunts on %s", super.getName(), foodType);
     }
 
-    public String getFoodType() {
-        return foodType;
+    public void eat() {
+        System.out.println("Хищники едят мясо");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Хищники спят");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Хищники перемещаются");
     }
 
     @Override
@@ -41,18 +53,5 @@ public final class Predator extends Mammals {
     public String toString() {
         return "Хищники. " + super.toString() + " " +
                 "тип пищи: " + foodType;
-    }
-    public void eat() {
-        System.out.println("Хищники едят мясо");
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println("Хищники спят");
-    }
-
-    @Override
-    public void move() {
-        System.out.println("Хищники перемещаются");
     }
 }
